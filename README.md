@@ -4,6 +4,8 @@ An offline auditor that reads `git log --format=fuller` output and answers one m
 
 **Confidence: High (85%)** that the marker set covers how AI involvement actually shows up in commit metadata today (disclosure trailers plus AI-looking identities); **Medium (55%)** that the identity heuristics keep false positives low on your contributor base — the pattern list is configurable precisely because "AI"/"bot" word matching will nick edge cases [estimated].
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 AI-attribution *tooling* is booming — every assistant now stamps its commits — but attribution *auditing* is not: once the stamps are on, nothing tells a maintainer what fraction of AI-involved commits carry them, or which commits look AI-touched yet disclose nothing. Existing anchors solve the wrong half of the loop: heios/ai-commit-attribution (0★ as of 2026-10-11) is research on *how to word* attribution trailers, JasonSongHoho/jetbrains-ai-commit-attribution (0★) is an IDE plugin that *adds* a commit option in GoLand, and bcmyguest/assisted-by (2★) *enforces* one specific trailer via a Claude Code plugin — all three write attribution; none reads history back and reports the disclosure rate.
